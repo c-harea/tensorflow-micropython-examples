@@ -8,4 +8,3 @@
 // it allows the start of the range allocated to 
 #define MICROPY_ALLOCATE_HEAP_USING_MALLOC (1)
 #define MICROPY_HEAP_SIZE_REDUCTION (512 * 1024)
-#define MICROPY_PY_CAMERA
