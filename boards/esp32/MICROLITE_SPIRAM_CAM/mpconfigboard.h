@@ -3,7 +3,7 @@
  
 #define MICROPY_PY_BLUETOOTH                (0)
 #define MODULE_CAMERA_ENABLED               (1)
-#define MICROPY_PY_CAMERA                   (3)
+#define MICROPY_PY_CAMERA                   
 
 // The offset only has an effect if a board has psram
 // it allows the start of the range allocated to 

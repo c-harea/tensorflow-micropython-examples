@@ -81,27 +81,7 @@ jobs:
           echo "make -C mpy-cross V=1 clean all"
           make -C mpy-cross V=1 clean all
 
-      - name: Build standard non-psram 4MB Flash firmware
-        run: |
-          source ./esp-idf/export.sh
 
-          echo "cd ./boards/esp32/MICROLITE"
-          cd ./boards/esp32/MICROLITE
-
-          echo "Building MICROLITE"
-          rm -rf builds
-          idf.py clean build
-
-          ../../../micropython-modules/microlite/assemble-unified-image-esp.sh \
-          ../../../micropython/ports/esp32
-
-      - name: Archive ESP32-MICROLITE firmware
-        uses: actions/upload-artifact@v2
-        with:
-          name: microlite-esp32-firmware
-          path: |
-            boards/esp32/MICROLITE/build/firmware.bin
-  
 
       - name: Build MICROLITE_SPIRAM_CAM
         run: |
